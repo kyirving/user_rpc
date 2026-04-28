@@ -26,5 +26,10 @@ func NewLoginLogic(ctx context.Context, svcCtx *svc.ServiceContext) *LoginLogic 
 func (l *LoginLogic) Login(in *user.LoginReq) (*user.LoginResp, error) {
 	// todo: add your logic here and delete this line
 
-	return &user.LoginResp{}, nil
+	return &user.LoginResp{
+		Token:         "token",
+		Expire:        0,
+		RefreshToken:  "refresh_token",
+		RefreshExpire: 0,
+	}, nil
 }
