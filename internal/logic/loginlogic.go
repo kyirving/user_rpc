@@ -27,9 +27,10 @@ func (l *LoginLogic) Login(in *user.LoginReq) (*user.LoginResp, error) {
 	// todo: add your logic here and delete this line
 
 	return &user.LoginResp{
+		UserId:        1,
 		Token:         "token",
-		Expire:        0,
+		Expire:        20,
 		RefreshToken:  "refresh_token",
-		RefreshExpire: 0,
+		RefreshExpire: 40,
 	}, nil
 }
